@@ -21,14 +21,13 @@ echo "INSTALLING X-RDP DONE"
 echo "======================"
 echo ""
 echo ""
-echo "Installing Firefox Start"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
-sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F > /dev/null 2>&1
+sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main" > /dev/null 2>&1
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install firefox -y > /dev/null 2>&1
-echo "======================"
-echo "INSTALLING X-RDP DONE"
-echo "======================"
+echo "================-======"
+echo "INSTALLING FIREFOX DONE"
+echo "======================="
 echo ""
 echo ""
 echo "> WAIT FOR COMPLETE PROGRESS <"
