@@ -2,20 +2,25 @@ echo "PROGRESS TIME : 5 MNT"
 echo "USE STABIL CONNECTION"
 echo ""
 
-echo ">> Setting Ngrok Start"
+echo "==> Setting Ngrok Start"
+echo ""
 rm -fr google-xrdp.sh  ngrok  ngrok.zip
 wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok.zip > /dev/null 2>&1
 read -p "Ngrok Authtoken: " CRP
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp --region ap 3389 &>/dev/null &
-echo ">> Setting Ngrok Success"
+echo ""
+echo "==> Setting Ngrok Success"
 echo ""
 
 echo "==> Installing X-Rdp Start"
-#sudo apt install lxde > /dev/null 2>&1
+echo ""
+echo "wait until progress finish"
+sudo apt install lxde > /dev/null 2>&1
 sudo apt install -y xrdp > /dev/null 2>&1
-#sudo sed -i.bak '/fi/a lxde-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
+sudo sed -i.bak '/fi/a lxde-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
+echo ""
 echo "==> Installing X-Rdp Success"
 echo ""
 
