@@ -26,7 +26,7 @@ sudo apt-get update > /dev/null 2>&1
 sudo apt-get install firefox -y > /dev/null 2>&1
 echo "==> Installing Firefox Success"
 echo ""
-
+sudo service xrdp start > /dev/null 2>&1
 echo "============================================="
 echo "YOUR XRDP INFO"
 echo "============================================="
