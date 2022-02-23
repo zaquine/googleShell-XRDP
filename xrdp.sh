@@ -19,15 +19,13 @@ sudo sed -i.bak '/fi/a lxde-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
 echo "==> Installing X-Rdp Success"
 echo ""
 
-echo "==> Installing Firefox Start"
 sudo apt install apt-transport-https curl > /dev/null 2>&1
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
-sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
-sudo apt-get update > /dev/null 2>&1
-sudo apt-get install firefox -y > /dev/null 2>&1
-clear
-echo "==> Installing Firefox Success"
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg > /dev/null 2>&1
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list > /dev/null 2>&1
+sudo apt update > /dev/null 2>&1
+sudo apt install brave-browser > /dev/null 2>&1
 echo ""
+
 sudo service xrdp start > /dev/null 2>&1
 echo "==========================="
 echo "YOUR XRDP INFO"
