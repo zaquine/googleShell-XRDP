@@ -24,6 +24,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
 sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install firefox -y > /dev/null 2>&1
+clear
 echo "==> Installing Firefox Success"
 echo ""
 sudo service xrdp start > /dev/null 2>&1
