@@ -9,6 +9,7 @@ unzip ngrok.zip > /dev/null 2>&1
 read -p "Ngrok Authtoken: " CRP
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp --region ap 3389 &>/dev/null &
+rm -fr ngrok.zip
 echo ">> Setting Ngrok Success"
 echo ""
 
