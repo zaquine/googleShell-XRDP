@@ -7,13 +7,12 @@ wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.
 unzip ngrok.zip > /dev/null 2>&1
 read -p "Ngrok Authtoken: " CRP
 ./ngrok authtoken $CRP 
-clear
 nohup ./ngrok tcp --region ap 3389 &>/dev/null &
 echo ">> Setting Ngrok Success"
 echo ""
 
 echo "==> Installing X-Rdp Start"
-sudo apt-get install lxde > /dev/null 2>&1
+sudo apt-get install -y lxde > /dev/null 2>&1
 sudo apt install -y xrdp > /dev/null 2>&1
 sudo sed -i.bak '/fi/a lxde-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
 echo "==> Installing X-Rdp Success"
