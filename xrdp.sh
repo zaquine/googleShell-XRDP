@@ -13,13 +13,14 @@ echo ">> Setting Ngrok Success"
 echo ""
 
 echo "==> Installing X-Rdp Start"
-sudo apt-get install -y lxde > /dev/null 2>&1
-sudo apt-get install -y xrdp > /dev/null 2>&1
+sudo apt-get install lxde > /dev/null 2>&1
+sudo apt install -y xrdp > /dev/null 2>&1
 sudo sed -i.bak '/fi/a lxde-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
 echo "==> Installing X-Rdp Success"
 echo ""
 
 echo "==> Installing Firefox Start"
+sudo apt install apt-transport-https curl > /dev/null 2>&1
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
 sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
 sudo apt-get update > /dev/null 2>&1
