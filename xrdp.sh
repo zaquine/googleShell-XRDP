@@ -7,8 +7,6 @@ rm -rf ngrok ngrok.zip ng.sh > /dev/null 2>&1
 wget -O ngrok.sh https://bit.ly/3pbeZd0 > /dev/null 2>&1
 chmod +x ngrok.sh
 ./ngrok.sh
-read -p "Ngrok Authtoken: " CRP
-./ngrok authtoken $CRP
 echo ">> Setting Ngrok Success"
 echo ""
 
