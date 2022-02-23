@@ -3,6 +3,7 @@ echo "USE STABIL CONNECTION"
 echo ""
 
 echo ">> Setting Ngrok Start"
+rm -fr ngrok ngrok.zip > /dev/null 2>&1
 wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok.zip > /dev/null 2>&1
 read -p "Ngrok Authtoken: " CRP
