@@ -13,9 +13,9 @@ echo ">> Setting Ngrok Success"
 echo ""
 
 echo "==> Installing X-Rdp Start"
-sudo apt install lxde > /dev/null 2>&1
+#sudo apt install lxde > /dev/null 2>&1
 sudo apt install -y xrdp > /dev/null 2>&1
-sudo sed -i.bak '/fi/a lxde-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
+#sudo sed -i.bak '/fi/a lxde-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
 echo "==> Installing X-Rdp Success"
 echo ""
 
